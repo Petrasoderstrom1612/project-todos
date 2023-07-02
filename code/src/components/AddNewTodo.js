@@ -22,11 +22,11 @@ const AddTodo = () => {
         id="new-todo"
         type="text"
         className="form-control mb-2 mr-sm-2"
-        placeholder="Add todo...🖊️"
+        placeholder="Type challenge here...🖊️"
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)} />
       <label htmlFor="new-todo" />
-      <AddTodoButtonStyled disabled={inputValue.length > 140} className="btn btn-primary mb-2" type="submit"> Add new to do</AddTodoButtonStyled>
+      <AddTodoButtonStyled className="btn btn-primary mb-2" type="submit"> Add new challenge</AddTodoButtonStyled>
       <CompletedQuestionStyled>Is this done?</CompletedQuestionStyled>
     </form>
   )
@@ -39,5 +39,5 @@ right:0;
 `
 
 const CompletedQuestionStyled = styled.h4`
-margin-top: 20px;
+margin: 18px 0 14px 0;
 `

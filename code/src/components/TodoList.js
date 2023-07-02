@@ -29,10 +29,11 @@ const TodoList = () => {
           <EachTaskStyler key={singleTodo.id}>
             <input
               type="checkbox"
+              id="checkbox"
               checked={singleTodo.isDone}
               className="strikethrough"
               onChange={() => onIsDoneToggle(singleTodo.id)} />
-            <label className="strikethrough">{singleTodo.name}
+            <label className="strikethrough" id="strikethrough">{singleTodo.name}
             </label>
             <RemoveButtonStyled onClick={() => onDeleteTodoButtonClick(index)} type="button" className="btn btn-warning">Remove</RemoveButtonStyled>
           </EachTaskStyler>

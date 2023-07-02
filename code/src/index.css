@@ -16,18 +16,17 @@ code {
   opacity:0;
   width: 18px;
   height:18px;
-  margin-left: 40px;
+  margin-left: 8px;
   z-index: 1;
 }
 
 [type="checkbox"] + label{
 position: relative;
-padding-left: 30px;
+padding-left: 3px;
 margin-right: 30px;
 cursor: pointer;
 display: inline-block;
 color: #666;
-line-height: 25px;
 }
 
 [type="checkbox"] + label::before{
@@ -87,3 +86,9 @@ line-height: 25px;
 input[type=checkbox]:checked + label.strikethrough{
   text-decoration: line-through;
 }
+
+#strikethrough{
+  width:61vw;
+  word-wrap: break-word;
+}
+

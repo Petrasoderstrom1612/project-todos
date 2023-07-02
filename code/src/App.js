@@ -18,7 +18,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <OuterWrapper>
-        <h2>My to-do list</h2>
+        <h2>Honza&apos;s challenges💍</h2>
         <AddNewTodo />
         <TodoList />
         <TotalItems />
