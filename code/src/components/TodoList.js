@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
 import styled from 'styled-components/macro'
@@ -22,9 +23,13 @@ const TodoList = () => {
   useEffect(() => {
     localStorage.setItem('toDoList', JSON.stringify(todoList))
   }, [todoList])
+
+  const sortedTodoList = [...todoList].sort((a, b) => b.id.localeCompare(a.id));
+  // Sort the todoList array from newest to oldest based on the todo IDs
+
   return (
     <>
-      {todoList.map((singleTodo, index) => {
+      {sortedTodoList.map((singleTodo, index) => {
         return (
           <EachTaskStyler key={singleTodo.id}>
             <input
