@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
 import styled from 'styled-components/macro'
 import { useSelector, useDispatch } from 'react-redux';
@@ -24,12 +22,9 @@ const TodoList = () => {
     localStorage.setItem('toDoList', JSON.stringify(todoList))
   }, [todoList])
 
-  const sortedTodoList = [...todoList].sort((a, b) => b.id.localeCompare(a.id));
-  // Sort the todoList array from newest to oldest based on the todo IDs
-
   return (
     <>
-      {sortedTodoList.map((singleTodo, index) => {
+      {todoList.map((singleTodo, index) => {
         return (
           <EachTaskStyler key={singleTodo.id}>
             <input
