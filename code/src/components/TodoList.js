@@ -21,7 +21,6 @@ const TodoList = () => {
   useEffect(() => {
     localStorage.setItem('toDoList', JSON.stringify(todoList))
   }, [todoList])
-
   return (
     <>
       {todoList.map((singleTodo, index) => {
