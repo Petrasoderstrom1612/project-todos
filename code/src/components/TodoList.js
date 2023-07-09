@@ -47,6 +47,7 @@ export default TodoList;
 
 const EachTaskStyler = styled.div`
 margin-bottom: 6%;
+margin-left: 26px;
 @media (min-width: 667px) {
 margin-bottom: 5%;
 }

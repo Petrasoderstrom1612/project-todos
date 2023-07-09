@@ -9,11 +9,13 @@ const AddTodo = () => {
   const dispatch = useDispatch();
   const onFormSubmit = (event) => {
     event.preventDefault();
-    const newTodo = { id: Date.now().toString(),
-      name: inputValue,
-      isCaught: false }
-    dispatch(todos.actions.addItem(newTodo));
-    setInputValue('');
+    if (inputValue.trim().length > 0) {
+      const newTodo = { id: Date.now().toString(),
+        name: inputValue,
+        isCaught: false }
+      dispatch(todos.actions.addItem(newTodo));
+      setInputValue('');
+    }
   }
 
   return (
@@ -39,5 +41,5 @@ right:0;
 `
 
 const CompletedQuestionStyled = styled.h4`
-margin: 18px 0 14px 0;
+margin: 18px 0 21px 0;
 `
