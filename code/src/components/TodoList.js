@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
 import styled from 'styled-components/macro'
 import { useSelector, useDispatch } from 'react-redux';
